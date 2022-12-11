@@ -37,25 +37,11 @@ def ChooseBot():
     global tie
     while True:
         positions = random.randint(0, 8)
-        print(f'Бот выбрал {positions+1} клетку')
         if type(field[positions]) == int:
+            print(f'Бот выбрал {positions+1} клетку')
             field[positions] = 'O'
             tie += 1
             break
-        else:
-            positions = random.randint(0, 8)
-            print(f'Бот выбрал {positions+1} клетку')
-            if type(field[positions]) == int:
-                field[positions] = 'O'
-                tie += 1
-                break
-            else:
-                positions = random.randint(0, 8)
-                print(f'Бот выбрал {positions+1} клетку')
-                if type(field[positions]) == int:
-                    field[positions] = 'O'
-                    tie += 1
-                    break
 
 
 def Winner(field):
