@@ -2,7 +2,9 @@ def create_id(warp):
     if len(warp.split('\n')) == 0:
         return 1
     else:
-        return int(warp.split('\n')[len(warp.split('\n'))-1].split(' || ')[0])+1
+        warp = warp.split('\n')[len(warp.split('\n'))-1]
+        id = warp.split(' || ')[0]
+        return id
 
 
 def employee_search(warp: str, employee: str) -> list[str]:
